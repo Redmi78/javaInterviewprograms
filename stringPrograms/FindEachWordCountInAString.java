@@ -16,7 +16,14 @@ public class FindEachWordCountInAString {
         }
 
          System.out.println(map);
+        for(String key : map.keySet())
+        {
+            if(map.get(key) > 1)
+            {
+                System.out.println(key + " = " + map.get(key));
+            }
      }
 
+    }
     }
 
