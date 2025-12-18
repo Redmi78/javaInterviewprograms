@@ -13,5 +13,16 @@ public class ReverseEachWordInAString {
       }
 System.out.print(" ");
 
+      //logic 2
+
+
+        for(int i=0;i< str1.length;i++)
+        {
+            for(int j=str1[i].length()-1;j>=0;j--)
+            {
+                System.out.print(str1[i].charAt(j));
+            }
+        }
+        System.out.print(" ");
     }
 }
