@@ -18,4 +18,6 @@ public class BeStreamsTest {
      test.stream().filter(test3 -> test3.length()>4).forEach(test3->System.out.println(test3));
         test.stream().filter(test4 -> test4.length()<=4).forEach(test4->System.out.println(test4));
     }
+
+  
 }
