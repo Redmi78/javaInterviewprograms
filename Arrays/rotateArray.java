@@ -1,3 +1,5 @@
+package Arrays;
+
 public class rotateArray {
 
     public static void rotate(int[] a, int k) {
