@@ -3,19 +3,21 @@ package Arrays;
 public class MoveAllZeroatOneEndInAArray {
     public static void main(String[] args) {
         int a[] = {1, 0, 2, 0, 3, 0};
-        int nonzeroValue = 0; //: the index where the next non‑zero should be placed.
-        int temp;
-        for (int currentValue = 0; currentValue < a.length; currentValue++) {
-            if (a[currentValue] != 0) {
-
-                temp = a[nonzeroValue];
-                a[nonzeroValue] = a[currentValue];
-                a[currentValue] = temp;
-                nonzeroValue++;
+        int index=0;
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]!=0){
+                int temp;
+                temp=a[index];
+                a[index]=a[i];
+                a[i]=temp;
+                index++;
             }
         }
-        for (int n : a) {
-            System.out.println(n);
+
+        for(int k=0;k<a.length;k++)
+        {
+            System.out.print(a[k]+" ");
         }
     }
 }
