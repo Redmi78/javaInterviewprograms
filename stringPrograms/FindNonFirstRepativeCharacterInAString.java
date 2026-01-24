@@ -1,6 +1,7 @@
 package stringPrograms;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class FindNonFirstRepativeCharacterInAString {
     public static void main(String[] args) {
@@ -35,6 +36,13 @@ public class FindNonFirstRepativeCharacterInAString {
 break;
             }
 
+        }
+
+        for (Map.Entry<Character, Integer> e : map.entrySet()) {
+            if (e.getValue() == 1) {
+                System.out.println("First non-repeating character: " + e.getKey());
+                break;
+            }
         }
 
     }
