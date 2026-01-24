@@ -14,7 +14,10 @@ public class maps {
         map.forEach((k,v)->{
             System.out.println(k+":"+v);
         });
-
+        for(HashMap.Entry<Integer,String> e : map.entrySet())
+        {
+            System.out.println(e.getKey()+":"+e.getValue());
+        }
 
     }
 }
