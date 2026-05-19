@@ -2,7 +2,7 @@ package stringPrograms;
 
 public class ReverseEachWordInAString {
     public static void main(String[] args) {
-        String str = "Sky is blue";
+        String str = "test user";
       String[] str1=  str.split(" ");
       for(String str2 : str1)
       {

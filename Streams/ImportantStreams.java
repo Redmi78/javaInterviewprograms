@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 /*| Stream Function             | Use Case             | Example                           |
         | --------------------------- | -------------------- | --------------------------------- |
         | `filter()`                  | Select specific data | Filter prices > 1000              |
-        | `map()`                     | Transform data       | Convert product name to uppercase |
+        | ` map()`                    | Transform data       | Convert product name to uppercase |
         | `distinct()`                | Remove duplicates    | Unique products                   |
         | `sorted()`                  | Sort data            | Price low → high                  |
         | `collect()`                 | Gather result        | Create list of filtered data      |
