@@ -4,10 +4,12 @@ public class ReverseWordInAString {
     public static void main(String[] args) {
         String str = "Hello World";
         String[] words = str.split(" ");
-        String reversedString = "";
+      String reversedString = "";
         for (int i = words.length - 1; i >= 0; i--) {
             reversedString = reversedString + words[i] + " ";
         }
         System.out.println(reversedString.trim());
+
+
     }
 }

@@ -18,3 +18,8 @@ public class program5 {
 
     }
 }
+ /*          _*
+             _**
+             _***
+             ****
+ */

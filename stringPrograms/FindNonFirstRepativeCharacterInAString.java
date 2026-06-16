@@ -1,14 +1,15 @@
 package stringPrograms;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FindNonFirstRepativeCharacterInAString {
     public static void main(String[] args) {
-        String str = "subba";
+        String str = "sbbau";
         char[] ch = str.toCharArray();
 
-        HashMap<Character, Integer> map = new HashMap<>();
+        LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
 
         // Step 1: Count frequencies
         for (int i = 0; i < ch.length; i++) {
@@ -28,12 +29,10 @@ public class FindNonFirstRepativeCharacterInAString {
         }*/
 
 
-        for(Character key :map.keySet())
-        {
-            if(map.get(key)==1)
-            {
+        for (Character key : map.keySet()) {
+            if (map.get(key) == 1) {
                 System.out.println("First non-repeating character: " + key);
-break;
+                break;
             }
 
         }
@@ -45,6 +44,17 @@ break;
             }
         }
 
-    }
+        int count = 0;
+        for (Map.Entry<Character, Integer> e : map.entrySet()) {
+            if (e.getValue() == 1) {
+                count++;
+                if (count == 2) {
+                    System.out.println("Second non-repeating character: " + e.getKey());
+                    break;
+                }
+            }
 
+        }
+
+    }
 }
