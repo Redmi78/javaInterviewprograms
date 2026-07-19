@@ -3,44 +3,36 @@ package Arrays;
 import java.util.Arrays;
 
 public class mergesortedArray {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
-        // Pointers to the last elements of the original parts
-        int a = m - 1;           // Last valid element in nums1
-        int b = n - 1;           // Last element in nums2
-        int index =nums1.length - 1;   // Last index of nums1 where we place the next largest element
-
-        // Merge arrays from the back
-        while (a >= 0 && b >= 0) {
-            if (nums1[a] > nums2[b]) {
-                nums1[index] = nums1[a];
-                a--;
-            } else {
-                nums1[index] = nums2[b];
-                b--;
-            }
-            index--;
-        }
-
-        // Copy any remaining elements from nums2
-        while (b >= 0) {
-            nums1[index] = nums2[b];
-            b--;
-            index--;
-        }
-        // No need to copy nums1 leftovers—they are already in place
-    }
-
-    // Test the function
     public static void main(String[] args) {
-        mergesortedArray solution = new mergesortedArray();
+        int[] a = {1, 3, 5};
+        int[] b = {2, 4, 6};
 
-        int[] nums1 = {1, 2, 3, 0, 0, 0};
-        int m = 3;
-        int[] nums2 = {2, 5, 6};
-        int n = 3;
+        int[] result = new int[a.length + b.length];
 
-        solution.merge(nums1, m, nums2, n);
-        System.out.println(Arrays.toString(nums1)); // Output: [1, 2, 2, 3, 5, 6]
+        int i = 0, j = 0, k = 0;
+
+        // compare both arrays
+        while (i < a.length && j < b.length) {
+
+            if (a[i] <= b[j]) {
+                result[k++] = a[i++];
+            } else {
+                result[k++] = b[j++];
+            }
+        }
+
+        // if elements left in a
+        while (i < a.length) {
+            result[k++] = a[i++];
+        }
+
+        // if elements left in b
+        while (j < b.length) {
+            result[k++] = b[j++];
+        }
+
+        // print result
+        System.out.println(Arrays.toString(result)); // Output: [1, 2, 3, 4, 5, 6]
     }
 }
 

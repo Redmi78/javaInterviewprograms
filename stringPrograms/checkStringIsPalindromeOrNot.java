@@ -2,11 +2,11 @@ package stringPrograms;
 
 public class checkStringIsPalindromeOrNot {
     public static void main(String[] args) {
-        String str="madam";
-        char ch[] = str.toCharArray();
+        String str="madak";
+      //  char ch[] = str.toCharArray();
         //ch[0]='s' ,ch[1] ='u'
         String rev="";
-        for(int i=ch.length-1;i>=0;i--)
+        for(int i=str.length()-1;i>=0;i--)
         {
             rev=rev+str.charAt(i);
         }

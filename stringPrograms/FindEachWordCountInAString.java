@@ -1,6 +1,7 @@
 package stringPrograms;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class FindEachWordCountInAString {
     public static void main(String[] args) {
@@ -23,6 +24,10 @@ public class FindEachWordCountInAString {
                 System.out.println(key + " = " + map.get(key));
             }
      }
+        for(Map.Entry<String,Integer> e : map.entrySet())
+                {
+                    System.out.println(e.getKey() + " = " + e.getValue());
+                }
 
     }
     }
