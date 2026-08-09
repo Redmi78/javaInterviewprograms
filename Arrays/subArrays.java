@@ -6,11 +6,11 @@ public class subArrays {
 
             int[] a = {1, 2, 3};
 
-            for (int start = 0; start < a.length; start++) {
+            for (int i = 0; i < a.length; i++) {
 
-                for (int end = start; end < a.length; end++) {
+                for (int j = i; j < a.length; j++) {
 
-                    for (int k = start; k <= end; k++) {
+                    for (int k = i; k <= j; k++) {
                         System.out.print(a[k] + " ");
                     }
 
