@@ -21,6 +21,7 @@ public class removeDuplicateValues {
             }
         }
 
+
         // Print values that occur only once
         for (int i = 0; i < a.length; i++) {
 
